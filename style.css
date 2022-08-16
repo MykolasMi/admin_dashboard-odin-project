@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    margin:  0 200px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr 0.3fr;
+    grid-template-rows: 0.35fr 0.5fr 0.4fr;
+}
+
+.sidebar {
+    grid-row: 1 / -1;
+}
+
+.header {
+    grid-column: 2 / -1;
+}
+
+.projects {
+    grid-row: 2 / -1;
+}
