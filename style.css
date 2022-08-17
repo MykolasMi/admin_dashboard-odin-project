@@ -8,8 +8,9 @@ body {
 .content {
     display: grid;
     grid-template-columns: 0.3fr 1fr 0.3fr;
-    grid-template-rows: 0.35fr 0.5fr 0.4fr;
+    grid-template-rows: 15vh 45vh 40vh;
     background-color: white;
+    overflow: hidden;
 }
 
 
@@ -18,17 +19,18 @@ body {
     grid-row: 1 / -1;
     background-color: lightskyblue;
     display: grid;
-    grid-template-rows: 0.35fr 0.2fr auto;
+    grid-template-rows: 0fr 0.2fr auto;
 }
 
 .dashboardLogo {
     display: flex;
     flex-direction: row;
-    justify-content: left;
     align-items: center;
     font-size: 1.3rem;
     font-weight: 640;
     margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 40px;
 }
 
 .dashboardLogo > img {
@@ -66,23 +68,21 @@ ul img {
 /**header start**/
 .header {
     grid-column: 2 / -1;
+    overflow: none;
 }
 
 .searchBar {
     display: grid;
     grid-template-columns: auto 1fr auto auto auto;
+    margin-top: 10px;
     align-items: center;
-    margin: 0px 40px;
+    margin: 20px 40px 20px 40px;
+    gap: 20px;
+    font-weight: 600;
 }
 
 input {
     width: 30rem;
-}
-
-.searchBar button {
-    list-style: none;
-    border: none;
-    background-color: transparent;
 }
 
 .searchBar input {
@@ -91,36 +91,55 @@ input {
     border-radius: 10px;
 }
 
+.searchBar .pfp {
+    height: 2.2rem;
+}
+
 .searchBar img {
     height: 1.5rem;
 }
 
-.pfp1 {
-    width: 10px;
+.greeting {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-weight: 600;
 }
 
-.greeting {
-    display: grid;
-    grid-template-rows: 2;
+.greeting :first-child {
+    font-size: 0.9rem;
 }
 
 .profileBar {
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: 0fr auto 0fr 0fr 0fr;
+    align-items: center;
+    box-shadow: 0px 2px 4px grey;
+    padding-bottom: 10px;
 }
 
 .profileBar img {
-    height: 1.5rem; 
+    height: 4rem;
 }
 
-.pfp {
+.profileBar button {
     list-style: none;
     border: none;
-    background-color: transparent;
+    background-color: lightblue;
+    border-radius: 15px;
+    height: 30px;
+    width: 90px;
+    margin-right: 40px;
 }
 
+.profileBar :first-child{
+    margin-left: 40px;
+}
 /**header end**/
+
+
 .projects {
+    margin-top: 20px;
     grid-row: 2 / -1;
     grid-column: 2 / 3;
 }
